@@ -1,197 +1,168 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial
-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
     <title>Document</title>
     <style>
-        body
-        {
+        body {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
         }
-        .task{
+
+        .task {
             background-color: gainsboro;
             height: fit-content;
             width: 500px;
             padding: 20px;
             height: 300px;
             margin: 50px;
-            border:black double 3px;
+            border: black double 3px;
             border-radius: 50px;
         }
-        .ib
-        {
-            margin:10px;
+
+        .ib {
+            margin: 10px;
             padding: 5px;
         }
-        
-        .but
-        {
-            padding:10px;
+
+        .but {
+            padding: 10px;
             background-color: red;
-            color:white;
+            color: white;
             font-size: 16px;
-            font-weight:900px;
+            font-weight: 900px;
         }
-        .but:hover
-        {
+
+        .but:hover {
             background-color: green;
         }
     </style>
- </head>
- <body>
+</head>
+
+<body>
     <div class="task">
         <center>
-        <h1 align="center">Greatest of three numbers</h1>
-        <input placeholder="enter your number a" class="ib" 
-type="number" name="" id="n1"> <br>
-        <input placeholder="enter your number b"class="ib" 
-type="number" name="" id="n2"> <br>
-        <input placeholder="enter your number c"class="ib" 
-type="number" name="" id="n3"> <br> <br>
-        <button class="but" onclick="g3()" 
-type="submit"><b>Compute</b></button>
-    </center>
-    </div>
-    <div class="task">
-        <center>
-        <h1>Sum of digits and palindrome</h1>
-        <input type="number" class="ib" id="input-box4"> <br>
-        <button onclick="sumdigit()" type="submit" 
-class="but"><b>Sum</b></button>
-        <button onclick="palindrome()" type="submit" 
-class="but"><b>Palindrome</b></button>
+            <h1 align="center">Greatest of three numbers</h1>
+            <input placeholder="enter your number a" class="ib" type="number" name="" id="n1"> <br>
+            <input placeholder="enter your number b" class="ib" type="number" name="" id="n2"> <br>
+            <input placeholder="enter your number c" class="ib" type="number" name="" id="n3"> <br> <br>
+            <button class="but" onclick="g3()" type="submit"><b>Compute</b></button>
         </center>
     </div>
     <div class="task">
         <center>
-        <h1>Factorial, Tables and Sum of Digits</h1>
-        <button onclick="factorial()" type="submit" 
-class="but"><b>Factorial</b></button>
-        <button onclick="tables()" type="submit" 
-class="but"><b>Tables</b></button>
-        <button onclick="sumup()" type="submit" 
-class="but"><b>Sum</b></button>
+            <h1>Sum of digits and palindrome</h1>
+            <input type="number" class="ib" id="input-box4"> <br>
+            <button onclick="sumdigit()" type="submit" class="but"><b>Sum</b></button>
+            <button onclick="palindrome()" type="submit" class="but"><b>Palindrome</b></button>
         </center>
     </div>
     <div class="task">
         <center>
-        <h1>Number game</h1>
-        <input type="number" id="input-box5" class="ib">
-        <button onclick="numgame()" type="submit" 
-class="but"><b>Check</b></button>
+            <h1>Factorial, Tables and Sum of Digits</h1>
+            <button onclick="factorial()" type="submit" class="but"><b>Factorial</b></button>
+            <button onclick="tables()" type="submit" class="but"><b>Tables</b></button>
+            <button onclick="sumup()" type="submit" class="but"><b>Sum</b></button>
         </center>
     </div>
     <div class="task">
         <center>
-        <h1>Circle</h1>
-        <input type="number" id="input-box6" class="ib">
-        <button onclick="circle()" type="submit" 
-class="but"><b>Area</b></button>
+            <h1>Number game</h1>
+            <input type="number" id="input-box5" class="ib">
+            <button onclick="numgame()" type="submit" class="but"><b>Check</b></button>
+        </center>
+    </div>
+    <div class="task">
         <center>
+            <h1>Circle</h1>
+            <input type="number" id="input-box6" class="ib">
+            <button onclick="circle()" type="submit" class="but"><b>Area</b></button>
+            <center>
     </div>
     <script>
-        function g3()
-        {
+        function g3() {
             let n1 = document.getElementById("n1").value;
             let n2 = document.getElementById("n2").value;
             let n3 = document.getElementById("n3").value;
             let great;
-            if(n1>n2 && n1>n3)
-                great=n1;
-            else if(n2>n1 && n2>n3)
-                great=n2;
+            if (n1 > n2 && n1 > n3)
+                great = n1;
+            else if (n2 > n1 && n2 > n3)
+                great = n2;
             else
-                great=n3;
-            alert("Greatest : "+n1);
+                great = n3;
+            alert("Greatest : " + n1);
         }
-        function sumdigit()
-        {
-            let n1 = parseInt(document.getElementById("input
-box4").value);
-            let sum=0;
-            while(n1>0)
-            {
-                sum+=(n1%10);
-                n1=parseInt(n1/10);
+        function sumdigit() {
+            let n1 = parseInt(document.getElementById("input-box4").value);
+            let sum = 0;
+            while (n1 > 0) {
+                sum += (n1 % 10);
+                n1 = parseInt(n1 / 10);
             }
-            alert("Sum : "+sum);
+            alert("Sum : " + sum);
         }
-        function palindrome()
-        {
+        function palindrome() {
             let n1 = document.getElementById("input-box4").value;
-            let l=0;
-            let r=n1.length-1;
-            let ans=true;
-            while(l<r)
-            {
-                if(n1.charAt(l)!=n1.charAt(r))
-                {
-                    ans=false;
+            let l = 0;
+            let r = n1.length - 1;
+            let ans = true;
+            while (l < r) {
+                if (n1.charAt(l) != n1.charAt(r)) {
+                    ans = false;
                     break;
                 }
                 l++;
                 r--;
             }
-            if(ans==true)
+            if (ans == true)
                 alert("Yes, it is a palindrome");
             else
                 alert("No, it is not a palindrome");
         }
-        function factorial()
-        {
+        function factorial() {
             let n1 = prompt("Enter your number : ");
-            let fact=1;
-            for(let i=1;i<=n1;i++)
-                fact*=i;
-            alert("Factorial : "+fact)
+            let fact = 1;
+            for (let i = 1; i <= n1; i++)
+                fact *= i;
+            alert("Factorial : " + fact)
         }
-        function tables()
-        {
+        function tables() {
             let n1 = prompt("Enter your number : ");
-            let ans="";
-            
-            for(let i=1;i<=10;i++)
-            {
-                let v1=n1+" * "+i+" = "+(n1*i);
-                ans+=(v1+"\n");
+            let ans = "";
+
+            for (let i = 1; i <= 10; i++) {
+                let v1 = n1 + " * " + i + " = " + (n1 * i);
+                ans += (v1 + "\n");
             }
-                
-            alert("Tables : \n"+ans);
+
+            alert("Tables : \n" + ans);
         }
-        function sumup()
-        {
+        function sumup() {
             let n1 = prompt("Enter your number : ");
-            let x=confirm("Are you sure ? ");
-            if(x)
-            {
-                let total=0;
-                for(let i=0;i<=n1;i++)
-                    total+=i;
-                alert("Total : "+total);
+            let x = confirm("Are you sure ? ");
+            if (x) {
+                let total = 0;
+                for (let i = 0; i <= n1; i++)
+                    total += i;
+                alert("Total : " + total);
             }
         }
-        function numgame()
-        {
+        function numgame() {
             let user = document.getElementById("input-box5").value;
-            let comp=parseInt(Math.random(1,10)*10);
-            if(user==comp)
-                alert("Good work \n"+"User : "+user+"\n"+"Computer : 
-"+comp);
+            let comp = parseInt(Math.random(1, 10) * 10);
+            if (user == comp)
+                alert("Good work \n" + "User : " + user + "\n" + "Computer : "+comp);
             else
-            alert("Not matches \n"+"User : "+user+"\n"+"Computer : 
-"+comp);
+                    alert("Not matches \n" + "User : " + user + "\n" + "Computer : "+comp);
         }
-        function circle()
-        {
-            let radius = parseInt(document.getElementById("input
-box6").value);
-            alert("Radius : "+(3.14*radius*radius));
+        function circle() {
+            let radius = parseInt(document.getElementById("input-box6").value);
+            alert("Radius : " + (3.14 * radius * radius));
         }
     </script>
- </body>
- </html>
+</body>
+</html>
