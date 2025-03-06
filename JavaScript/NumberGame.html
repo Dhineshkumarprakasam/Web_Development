@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+            width:200px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="task">
+            <h1>Number game</h1>
+            <input type="number" id="input-box5" min="0" max="9" class="ib">
+            <button onclick="numgame()" type="submit" class="but"><b>Check</b></button>
+        </div>
+    </center>
+
+    <script>
+        function numgame() {
+            let user = document.getElementById("input-box5").value;
+            let comp = parseInt(Math.random() * 10);
+            if (user == comp)
+                alert("Good work \n" + "User : " + user + "\n" + "Computer : "+comp);
+            else
+                    alert("Not matches \n" + "User : " + user + "\n" + "Computer : "+comp);
+        }
+    </script>
+</body>
+
+</html>
