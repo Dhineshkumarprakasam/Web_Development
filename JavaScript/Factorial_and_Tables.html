@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="task">
+            <h1>Factorial, Tables and Sum of Digits</h1>
+            <button onclick="factorial()" type="submit" class="but"><b>Factorial</b></button>
+            <button onclick="tables()" type="submit" class="but"><b>Tables</b></button>
+        </div>
+    </center>
+
+    <script>
+        function factorial() {
+            let n1 = prompt("Enter your number : ");
+            let fact = 1;
+            for (let i = 1; i <= n1; i++)
+                fact *= i;
+            alert("Factorial : " + fact)
+        }
+        function tables() {
+            let n1 = prompt("Enter your number : ");
+            let ans = "";
+
+            for (let i = 1; i <= 10; i++) {
+                let v1 = n1 + " * " + i + " = " + (n1 * i);
+                ans += (v1 + "\n");
+            }
+
+            alert("Tables : \n" + ans);
+        }
+    </script>
+</body>
+
+</html>
