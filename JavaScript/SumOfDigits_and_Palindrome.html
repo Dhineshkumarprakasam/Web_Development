@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="task">
+            <h1>Sum of digits and palindrome</h1>
+            <input type="number" class="ib" id="input-box4"> <br>
+            <button onclick="sumdigit()" type="submit" class="but"><b>Sum</b></button>
+            <button onclick="palindrome()" type="submit" class="but"><b>Palindrome</b></button>
+        </div>
+    </center>
+
+    <script>
+        function sumdigit() {
+            let n1 = parseInt(document.getElementById("input-box4").value);
+            let sum = 0;
+            while (n1 > 0) {
+                sum += (n1 % 10);
+                n1 = parseInt(n1 / 10);
+            }
+            alert("Sum : " + sum);
+        }
+        function palindrome() {
+            let n1 = document.getElementById("input-box4").value;
+            let l = 0;
+            let r = n1.length - 1;
+            let ans = true;
+            while (l < r) {
+                if (n1.charAt(l) != n1.charAt(r)) {
+                    ans = false;
+                    break;
+                }
+                l++;
+                r--;
+            }
+            if (ans == true)
+                alert("Yes, it is a palindrome");
+            else
+                alert("No, it is not a palindrome");
+        }
+    </script>
+</body>
+
+</html>
