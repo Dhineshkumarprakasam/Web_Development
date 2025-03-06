@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+            margin-top: 50px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="task">
+            <h1>Generate Array</h1>
+            <input type="number" id="input-box" class="ib" placeholder="Enter length e.g.5" min="1" max="12" style="width:200px;"> <br>
+            <button onclick="generate()" type="submit" class="but"><b>Generate</b></button>
+        </div>
+        <center>
+
+            <script>
+                function generate() {
+                    let data = parseInt(document.getElementById("input-box").value);
+                    let array=[];
+                    for(i=0;i<data;i++)
+                    {
+                        array.push(Math.round(Math.random()*10));
+                    }
+                    alert("array : "+array);
+                }
+            </script>
+</body>
+
+</html>
