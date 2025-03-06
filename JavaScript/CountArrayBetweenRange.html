@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+            margin-top: 50px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="task">
+            <h1>Count Array</h1>
+            <input type="text" id="input-box" class="ib" placeholder="Enter array eg.10,20,30"> <br>
+            <input type="number" id="input-range-lower" placeholder="e.g 13" class="ib">
+            <input type="number" id="input-range-upper" placeholder="e.g 29" class="ib"> <br>
+            <button onclick="count()" type="submit" class="but"><b>Count</b></button>
+        </div>
+        <center>
+
+            <script>
+                function count() {
+                    let count = 0;
+                    let data = document.getElementById("input-box").value.split(",");
+                    let array = [];
+                    for (let i = 0; i < data.length; i++) {
+                        if (!isNaN(data[i]))
+                            array.push(parseInt(data[i]));
+                    }
+
+                    let upper = parseInt(document.getElementById("input-range-upper").value);
+                    let lower = parseInt(document.getElementById("input-range-lower").value);
+
+                    for (let i = 0; i < array.length; i++)
+                        if (array[i] > lower && array[i] < upper)
+                            count++;
+
+                    alert("No of elements between " + lower + " and " + upper + " is : " + count);
+                }
+            </script>
+</body>
+
+</html>
