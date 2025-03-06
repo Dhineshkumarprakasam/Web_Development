@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+            width:200px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="task">
+            <h1>Circle</h1>
+            <input type="number" id="input-box6" class="ib">
+            <button onclick="circle()" type="submit" class="but"><b>Area</b></button>
+        </div>
+    </center>
+
+    <script>
+        function circle() {
+            let radius = parseInt(document.getElementById("input-box6").value);
+            alert("Radius : " + (3.14 * radius * radius));
+        }
+    </script>
+</body>
+
+</html>
