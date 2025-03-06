@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+            margin-top: 50px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="task">
+            <h1>Count Vowels</h1>
+            <input type="text" id="input-box" class="ib" placeholder="Enter string"> <br>
+            <button onclick="count()" type="submit" class="but"><b>Count</b></button>
+        </div>
+        <center>
+
+            <script>
+                function count() {
+                    let count = 0;
+                    let data = document.getElementById("input-box").value;
+                    for(i=0;i<data.length;i++)
+                    {
+                        let val=data.charAt(i);
+                        if(val=='a' || val=='e' || val=='i' || val=='o' || val=='u')
+                            count++;
+                    }
+
+                    alert("No of vowels : "+count);
+                }
+            </script>
+</body>
+
+</html>
