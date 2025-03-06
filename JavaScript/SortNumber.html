@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document</title>
+    <style>
+        .task {
+            background-color: gainsboro;
+            height: fit-content;
+            width: 500px;
+            padding: 20px;
+            height: 300px;
+            margin: 50px;
+            border: black double 3px;
+            border-radius: 50px;
+        }
+
+        .ib {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .but {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: 900px;
+            margin-top: 50px;
+        }
+
+        .but:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="task">
+            <h1>Sort Numbers</h1>
+            <input type="text" id="input-box" class="ib" placeholder="Enter array eg.10,20,30"> <br>
+            <button onclick="sort()" type="submit" class="but"><b>Sort</b></button>
+        </div>
+        <center>
+
+            <script>
+                function sort() {
+                    let data = document.getElementById("input-box").value.split(",");
+                    let array = [];
+                    for (let i = 0; i < data.length; i++) {
+                        if (!isNaN(data[i]))
+                            array.push(parseInt(data[i]));
+                    }
+
+                    for(i=0;i<data.length;i++)
+                    {
+                        for(j=i+1;j<data.length;j++)
+                        {
+                            if(array[i]>array[j])
+                            {
+                                let temp=array[i];
+                                array[i]=array[j];
+                                array[j]=temp;
+                            }
+                        }
+                    }
+
+                    alert("Sorted : "+array);
+                }
+            </script>
+</body>
+
+</html>
+          
