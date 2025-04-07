@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Assessment Submission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Digital Assessment Submission Form</h2>
+  <form id="submissionForm">
+    <label>Name: <input type="text" name="name" required></label><br>
+    <label>Reg No: <input type="text" name="regno" required></label><br>
+    <label>Date of Submission: <input type="date" name="submission_date" required></label><br><br>
+
+    <p>Digital Assessment 1:</p>
+    <label><input type="radio" name="da1" value="Yes" required> Yes</label>
+    <label><input type="radio" name="da1" value="No"> No</label><br>
+
+    <p>Digital Assessment 2:</p>
+    <label><input type="radio" name="da2" value="Yes" required> Yes</label>
+    <label><input type="radio" name="da2" value="No"> No</label><br><br>
+
+    <button type="button" onclick="submitForm()">Insert</button>
+    <button type="button" onclick="displayData()">Display</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
