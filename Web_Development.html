@@ -1,0 +1,483 @@
+<html>
+
+<head>
+    <title>Dhinesh kumar</title>
+    <style>
+        span {
+            font-size: 20px;
+            color: red;
+            padding-right: 20px;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body onload="alert('welcome to this page')" onbeforeunload="alert('thank you for visiting');">
+    <center>
+        <h1>Learn Web Development</h1>
+    </center>
+    <h1>Formatting tags</h1>
+
+    <span>Font tag :</span>
+    <font face="arial" size="5" color="blue">hello world</font> <br>
+    <span>b tag :</span> <b>Hello world</b> <br>
+    <span>strong tag :</span> <strong>Hello world</strong><br>
+    <span>u tag :</span> <u>Hello world</u> <br>
+    <span>i tag :</span> <i>Hello world</i> <br>
+    <span>em tag :</span> <em>Hello world</em> <br>
+    <span>strike tag :</span><strike>Hello world</strike> <br>
+    <span>mark tag : </span> <mark>highlighted text</mark> <br>
+
+    <span>code tag :</span><code>code</code> <br>
+    <span>samp tag :</span> <samp>Sample output</samp> <br>
+    <span>kbd tag :</span><kbd>keyboard text : ctrl + c</kbd> <br>
+    <span>dfn tag :</span><dfn>Definition</dfn> <br>
+    <span>var tag :</span><var>Variable</var> <br>
+    <span>cite tag :</span> <cite>Author name</cite> <br>
+
+    <span>sub tag :</span> log 10 <sub>2</sub><br>
+    <span>sup tag</span> 10 <sup>5</sup><br>
+
+    <acronym title="hello everyone">message</acronym> <br>
+
+    <h1>Preformatted text</h1>
+    <pre>
+            #include &lt;iostream&gt;
+            using namespace std;
+
+            int main()
+            {
+                int a,b;
+
+                cout<<"Enter a : ";
+                cin>>a;
+
+                cout<<"Enter b : ";
+                cin>>b;
+
+                cout<<"Sum : "+(a+b);
+            }
+        </pre>
+
+    <h1>Special Characters</h1>
+    <span>less than</span> &lt; <br>
+    <span>greater than</span> &gt; <br>
+    <span>Ambressand</span> &amp; <br>
+    <span>Quotes</span> &quot; <br>
+    <span>Space</span> &nbsp; <br>
+    <span>Euro</span> &euro; <br>
+
+    <h1>Lists in HTML</h1>
+    <span>Unordered list :</span> <br>
+    <ul type="square"> <!-- type : disc(default), square, circle -->
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+
+    <br>
+
+    <span>Ordered List</span>
+    <ol type="1" start="9">
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ol>
+
+    <span>Definition List</span>
+    <dl>
+        <dt>Html</dt>
+        <dd>Hypter Text Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheet</dd>
+    </dl>
+
+    <span>Nested List</span>
+    <ol>
+        <li>
+            Delhi
+            <ul>
+                <li>New Delhi</li>
+            </ul>
+        </li>
+        <li>
+            Haryana
+            <ul>
+                <li>Chandigarh</li>
+            </ul>
+        </li>
+        <li>
+            Rajasthan
+            <ul>
+                <li>Jaipur</li>
+            </ul>
+        </li>
+    </ol>
+
+    <ol>
+        <li>Coffee</li>
+        <li>
+            Tea
+            <ol>
+                <li>Black tea</li>
+                <li>Green tea</li>
+            </ol>
+        </li>
+        <li>Milk</li>
+    </ol>
+
+    <h1>Images</h1>
+    <img src="chart.png" alt="img"> <br>
+
+    <h1>Anchor Tag</h1>
+    <a href="https://google.com" target="_blank">Click on this link</a>
+
+    <h1>Table</h1>
+    <table style="border-collapse: separate;" cellpadding="10" cellspacing="5" border="1" bgcolor="yellow" bordercolor="red">
+        <caption>This is a sample table</caption>
+        <tr>
+            <th rowspan="3">Day</th>
+            <th colspan="3">Seminar</th>
+        </tr>
+        <tr>
+            <th colspan="2">Schedule</th>
+            <th rowspan="2">Topic</th>
+        </tr>
+        <tr>
+            <th>Begin</th>
+            <th>End</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2">8.00 a.m.</td>
+            <td rowspan="2">5:00 <p class="m"></p>
+            </td>
+            <td>Introduction to XML</td>
+        </tr>
+        <tr>
+            <td>Validity : DTD and Relax NG</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td>8:00 am</td>
+            <td>11.00 am</td>
+            <td>XPath</td>
+        </tr>
+        <tr>
+            <td>11.00 am</td>
+            <td>2:00 pm</td>
+            <td rowspan="2">XSL Transformations</td>
+        </tr>
+        <tr>
+            <td>2:00 pm</td>
+            <td>5:00 pm</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>8:00 am</td>
+            <td>12:00 pm</td>
+            <td>XSL Formatting Objects</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table width="400" height="300" cellpadding="25" cellspacing="5" border="1">
+        <caption>Basic Fruit Comparision Chart</caption>
+        <tr>
+            <th>Fruit</th>
+            <th>Color</th>
+        </tr>
+        <tr>
+            <td colspan="2">Apple</td>
+        </tr>
+        <tr>
+            <td>Avacado</td>
+            <td rowspan="2">Green</td>
+        </tr>
+        <tr>
+            <td>Watermelon</td>
+        </tr>
+    </table>
+
+    <h1>Html Forms</h1>
+    <form onsubmit="validate()">
+        <fieldset>
+            <legend>Login Data</legend>
+            <label>Name</label>
+            <input type="text" autofocus required> <br>
+
+            <label >Password</label>
+            <input type="text" required minlength="2" maxlength="5"> <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Personal</legend>
+            <label>Gender</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female <br>
+
+            <label>Hobbies</label> <br>
+            <input type="checkbox" value="read"> Reading
+            <input type="checkbox" value="play"> Playing <br>
+
+            <select name="course">
+                <option value="">Select</option>
+                <optgroup label="engineering">
+                    <option value="CS">CS</option>
+                    <option value="eee">EEE</option>
+                    <option value="ece">ECE</option>
+                </optgroup>
+                <optgroup label="non-eng">
+                    <option value="bsc">B.Sc cs</option>
+                    <option value="bca">BCA</option>
+                    <option value="bba">BBA</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Favourite</legend>
+            <label>Color </label><input type="color" id="color"> <br><br>
+            <input type="date"> <br>
+            <input type="datetime-local"> <br>
+            <input type="file" accept=".pdf">
+        </fieldset> 
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validate()
+        {
+            document.write(document.getElementById("color").value);
+        }
+    </script>
+    <h1>CSS Background properties</h1>
+    <div style="background-color: black; color: white; width:500px ;">
+        Trust yourself that you can do it and get it.
+        <p style="background-color: pink; color:blue;"> 
+            Ambition is the path to success.
+        </p>
+        <p style="background-image: url('back.png'); color: black;">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Numquam aperiam minus inventore enim iste consectetur excepturi et quod possimus quisquam dolor amet
+            velit autem rerum nostrum consequuntur nulla consequatur, sapiente illum id odio tenetur laboriosam sequi
+            quae? Cupiditate, magni voluptas velit ducimus perferendis voluptates quod ea dignissimos quas deserunt
+            eligendi enim voluptatem repudiandae reprehenderit exercitationem voluptatum cum. Nesciunt, perferendis quo
+            sint adipisci facere officiis odio eius, eligendi voluptatum ullam esse fugiat, labore facilis? Cumque
+            nostrum ipsa rem id molestiae nobis tempore fugiat veritatis deleniti, obcaecati nihil nesciunt iste animi
+            aspernatur. At dolor aspernatur consequuntur eum debitis, nobis libero commodi iusto.
+        </p>
+    </div>
+
+    <h1>CSS Border Styles</h1>
+    <div style="background-color: black; color: white; width: 500px;">
+        <p style="border-style: dashed; border-radius: 50px; border-color: red; padding: 10px;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, aperiam nisi ad fugiat at expedita similique
+            blanditiis nihil corporis dolores.
+        </p>
+        <p style="border-color: green; border-top-style: dotted; border-bottom-style: solid; padding: 10px; border-width: 10px;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam eaque facere ratione deleniti soluta
+            consectetur mollitia cupiditate quos commodi dolorum?
+        </p>
+        <p style="border:solid 5px blue; padding: 10px;">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae sapiente hic in accusamus praesentium
+            architecto optio rerum incidunt ipsum ipsa?
+        </p>
+    </div>
+
+    <h1>CSS Text Prperties</h1>
+    <h3 style="text-decoration:underline;">
+        Lorem ipsum dolor sit amet 
+    </h3>
+    <h3 style="text-decoration: line-through;">Lorem ipsum dolor sit amet.</h3>
+    <h3 style="text-decoration: overline;">Lorem ipsum dolor sit amet.</h3>
+    <h3 style="text-transform: uppercase; text-indent: 100px;">Lorem ipsum dolor sit amet.</h3>
+    <h3 style="letter-spacing: 10px; word-spacing: 25px;">Lorem ipsum dolor sit amet.</h3>
+
+    <h2 style="text-shadow: 10px 5px 2.5px red;">Lorem, ipsum.</h2>
+
+    <h2 style="font-variant: small-caps;">Lorem Ipsum dolor sit amet.</h2>
+
+    <a href="https://google.com" target="_blank">i am a clickable link</a>
+
+    <h1>Programming in Java Script</h1>
+    <button onclick="factorial()">Find factorial</button>
+    <button onclick="calcDiscount(parseInt(prompt('Enter your val : ')))">Calculate Discount</button>
+
+    <h3 id="todo"></h3>
+
+    <h1>Java Script Form Validation</h1>
+    <form>
+        <h2>Add Beneficiary</h2>
+        <table>
+            <tr>
+                <td>Type of Bank</td>
+                <td>
+                    <select id="bank">
+                        <option value="sbi">SBI</option>
+                        <option value="hdfc">HDFC</option>
+                        <option value="indian bank">Indian Bank</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Beneficiay name</td>
+                <td><input type="text" id="bname"></td>
+            </tr>
+
+            <tr>
+                <td>Account no</td>
+                <td><input type="text" id="acno"></td>
+            </tr>
+
+            <tr>
+                <td>Re-Enter Account no</td>
+                <td><input type="text" id="acno2"></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+
+            <tr>
+                <td>IFSC</td>
+                <td><input type="text" id="ifsc"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input onclick="validate()" type="submit" value="Add">
+                    <input type="submit" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+
+        function validate()
+        {
+            let valid=true;
+
+            //name
+            let name = document.getElementById("bname").value;
+            if(!name.trim().match(/^[a-zA-Z]{1,20}$/))
+            {
+                alert("invalid name");
+                valid=false;
+            }
+
+            //acno
+            let acno = document.getElementById("acno").value;
+            let acno2= document.getElementById("acno2").value;
+
+            if(!acno.match(/^[0-9]{11}$/))
+            {
+                alert("accno should be a 11 digit no");
+                valid=false;
+            }
+
+            if(acno!=acno2)
+            {
+                alert("account no does not match");
+                valid=false;
+            }
+
+            let ifsc = document.getElementById("ifsc").value;
+            if(!ifsc.match(/^[A-Z]{4}[0-9]{3}[A-Z]{1}[0-9]{2}$/))
+            {
+                alert("invalid ifsc code");
+                valid=false;
+            }
+
+            let email = document.getElementById("email").value;
+            if(!email.match(/^[a-z0-9_]{1,}.@gmail.com$/))
+            {
+                alert("invalid email");
+                valid=false;
+            }
+
+            if(valid)
+                alert("Successfully submitted");
+        }
+        let out = document.getElementById("todo");
+        let arr=["Buy groceries","complete ass","call mom","workout"];
+        out.innerText='['+arr+']';
+
+        setTimeout(() => {
+            arr.push("visit hospital");
+            out.innerText='[' + arr + ']';
+
+            setTimeout(() => {
+            arr.shift();
+            out.innerText='[' + arr + ']';
+
+            setTimeout(() => {
+            let pos = parseInt("2");
+            let task="puppy bath";
+            arr.splice(pos,0,task);
+            out.innerText='[' + arr + ']';
+
+            setTimeout(() => {
+            arr.sort();
+            out.innerText='[' + arr + ']';
+
+            setTimeout(() => {
+            arr.pop();
+            out.innerText='[' + arr + ']';
+
+
+        }, 5000);
+
+        }, 5000);
+
+
+        }, 5000);
+
+
+        }, 5000);
+
+
+        }, 5000);
+
+        
+        
+        
+        function factorial()
+        {
+            let num=prompt("Enter your number : ");
+            let fact=1;
+            if(!isNaN(num))
+            {
+                for(let i=parseInt(num);i>0;i--)
+                    fact*=i;
+                alert("Factorial is : "+fact);
+
+            }
+        }
+
+        function calcDiscount(amt)
+        {
+            let discount=0;
+            if(amt<5000)
+                discount=0;
+            else if(amt>5000 && amt<10000)
+                discount=5;
+            else if(amt>10000 && amt<20000)
+                discount=10;
+            else
+                discount=20;
+
+            let total = amt - (amt*(discount/100));
+            alert("Discount : "+total);
+        }
+    </script>
+</body>
+
+</html>
