@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css" />
+    <script defer src="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3>Container-fluid , grid</h3>
+        <div class="row">
+            <div class="col text-center bg-warning">hello world</div>
+            <div class="col text-center bg-info">thank you</div>
+        </div>
+        <div class="row">
+            <div class="col-8 text-center bg-dark">1</div>
+            <div class="col-2 text-center bg-success">2</div>
+            <div class="col-2 text-center bg-danger">3</div>
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Container , grid</h3>
+        <div class="row">
+            <div class="col text-center bg-warning">hello world</div>
+            <div class="col text-center bg-info">thank you</div>
+        </div>
+        <div class="row">
+            <div class="col-8 text-center bg-dark">1</div>
+            <div class="col-2 text-center bg-success">2</div>
+            <div class="col-2 text-center bg-danger">3</div>
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Nested</h3>
+        <div class="row">
+            <div class="col bg-success">a</div>
+            <div class="col">
+                <div class="row bg-info">b</div>
+                <div class="row bg-danger">c</div>
+            </div>
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Accordion</h3>
+        <div id="ex" class="accordion">
+            <div class="acordion-item">
+                <h2 class="accordion-header">
+                    <button data-bs-target="#one" data-bs-toggle="collapse" class="accordion-button collapsed">
+                        Item 1
+                    </button>
+                </h2>
+                <div id="one" class="accordion-collapse collapse" data-bs-parent="#ex">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
+                        voluptates.
+                    </div>
+                </div>
+            </div>
+
+            <div class="acordion-item">
+                <h2 class="accordion-header">
+                    <button data-bs-target="#two" data-bs-toggle="collapse" class="accordion-button collapsed">
+                        Item 2
+                    </button>
+                </h2>
+                <div id="two" class="accordion-collapse collapse" data-bs-parent="#ex">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
+                        voluptates.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Button</h3>
+        <input type="button" value="button1" class="btn btn-primary" />
+        <input type="button" value="button2" class="btn btn-secondary" />
+        <input type="button" value="button3" class="btn btn-success" />
+        <input type="button" value="button3" class="btn btn-info" />
+        <input type="button" value="button3" class="btn btn-warning" />
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Button outline</h3>
+        <input type="button" value="button1" class="btn btn-outline-primary" />
+        <input type="button" value="button2" class="btn btn-outline-secondary" />
+        <input type="button" value="button3" class="btn btn-outline-success" />
+        <input type="button" value="button3" class="btn btn-outline-info" />
+        <input type="button" value="button3" class="btn btn-outline-warning" />
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Button group</h3>
+        <div class="btn-group">
+            <input type="button" value="button1" class="btn btn-primary" />
+            <input type="button" value="button2" class="btn btn-secondary" />
+            <input type="button" value="button3" class="btn btn-success" />
+            <input type="button" value="button3" class="btn btn-info" />
+            <input type="button" value="button3" class="btn btn-warning" />
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Button group vertical</h3>
+        <div class="btn-group-vertical">
+            <input type="button" value="button1" class="btn btn-primary" />
+            <input type="button" value="button2" class="btn btn-secondary" />
+            <input type="button" value="button3" class="btn btn-success" />
+            <input type="button" value="button3" class="btn btn-info" />
+            <input type="button" value="button3" class="btn btn-warning" />
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Dropdown</h3>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                click me
+                <ul class="dropdown-menu">
+                    <li><a href="" class="dropdown-item">Hello 1</a></li>
+                    <li><a href="" class="dropdown-item">Hello 2</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a href="" class="dropdown-item">Hello 3</a></li>
+                </ul>
+            </button>
+        </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Nav bar and Tab bar</h3>
+        <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Pagination</h3>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link">Previous</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">3</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <h3>Form</h3>
+        <div class="form">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label for="name" class="form-label">Name</label>
+                </div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2"><label for="" class="form-label">Gender</label></div>
+                <div class="col-sm-10">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" id="" class="form-check-input">
+                        <label for="" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" id="" class="form-check-input">
+                        <label for="" class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" id="" class="form-check-input">
+                    <label for="" class="form-check-label">Trans</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
