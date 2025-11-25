@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="accordion" id="parent"> 
+                <!-- 
+                    data-bs-target : used to identify which content to be displayed
+                    data-bs-toggle : used how the content should be displayed (opening & closing)
+                    data-bs-parent : helps in closing one accordion-item when opening other
+
+                    glimpse:
+                        div.accordion
+                            div.accordion-item
+                                div.accordion-header
+                                    div.accordion-button.collapsed[data-bs-target data-bs-toggle]
+                                div.accordion-collapse.collapse[data-bs-parent]
+                                    div.accordion-body
+                                        <content>
+                 -->
+                
+
+                <!--Item 1-->
+                <div class="accordion-item">
+                    <div class="accordion-header" >
+                        <div class="accordion-button collapsed" data-bs-target="#item1" data-bs-toggle="collapse">Python</div>
+                    </div>
+                    <div class="accordion-collapse collapse" id="item1" data-bs-parent="#parent">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, quia.
+                        </div>
+                    </div>
+                </div>
+
+                <!--Item 2-->
+                <div class="accordion-item">
+                    <div class="accordion-header" >
+                        <div class="accordion-button collapsed" data-bs-target="#item2" data-bs-toggle="collapse">Java</div>
+                    </div>
+                    <div class="accordion-collapse collapse" id="item2" data-bs-parent="#parent">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, quia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
