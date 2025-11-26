@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li>Number : 1</li>
+            <li>Number : 2</li>
+            <li>Number : 3</li>
+            <li>Number : 4</li>
+            <li>Number : 5</li>
+        </ul>
+
+        <script>
+            $(document).ready(function(){
+                $.each($("li"),function(index,item){
+                    console.log($(item).text());
+                })
+            });
+        </script>   
+    </body>
+</html>
