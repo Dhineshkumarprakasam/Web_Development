@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <p class="p1">p1 Lorem ipsum dolor sit amet.</p>
+        <p id="p2"> p2 Lorem ipsum dolor sit amet.</p>
+        <button>Thank you</button>
+        <button>Submit</button> <br><br>
+        <table>
+            <tr>
+                <td>name</td>
+                <td>dhinesh</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>20</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li>Number : 1</li>
+            <li>Number : 2</li>
+            <li>Number : 3</li>
+            <li>Number : 4</li>
+            <li>Number : 5</li>
+        </ul>
+
+        <script>
+            $(document).ready(function(){
+
+                $("p").css("background-color","red");//select by tag
+                let p1 = $(".p1"); //select by class
+                let p2 = $("#p2").val(); //select by id
+                let button = $(":button"); //select all button
+                let tr_even = $("tr:even"); //select table even rows
+                let tr_odd = $("tr:odd"); //select table odd rows
+
+                //set css using jquery
+                tr_odd.css("background-color","lightpink");
+                tr_even.css("background-color","lightgreen");
+                button.css("background-color","black");
+                button.css("color","white");
+
+
+                let colors = ["lightblue","lightpink","lightgreen","lavender","lightgoldenrodyellow"]
+                for(let i=0;i<colors.length;i++){
+                    let query=`ul li:eq(${i})`; //access list element by index
+                    $(query).css("background-color",colors[i]);
+                }
+            })
+        </script>
+    </body>
+</html>
