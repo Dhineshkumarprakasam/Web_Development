@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="name" placeholder="name">
+            <input type="number" name="age" placeholder="age">
+            <input type="button" value="Submit">
+        </form> 
+        <div class="out"></div>
+
+        <script>
+            $(document).ready(function(){
+                $(":button").click(function(){
+                    let output = $(".out");
+
+                    //serialize
+                    let d1 = $("form").serialize();
+                    output.append(d1);
+                    output.append("<br><br><br>")
+
+                    //serialize array;
+                    let d2 = $("form").serializeArray();
+                    $.each(d2,function(index,item){
+                        output.append(item.name+" : "+item.value+"<br>");
+                    });
+                    
+                })
+            })
+        </script>
+    </body>
+</html>
