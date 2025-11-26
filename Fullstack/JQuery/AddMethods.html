@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+    
+        <p><b>Hello world</b></p>
+        <div class="out"></div>
+
+        <script>
+            $(document).ready(function(){
+                let output = $(".out");
+                
+                //insert at end of div.out
+                output.append($("p").text()+"<br>") // hello world
+                output.append($("p").html()) // hello world - in bold
+
+                //insert at front of div.out
+                output.prepend("In front <br>");
+
+                //new div before div.out
+                output.before("<div><p>I am before</p></div>");
+
+                //new div after div.out
+                output.after("<div><p>I am after</p></div>");
+            })
+        </script>
+    </body>
+</html>
